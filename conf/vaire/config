@@ -28,7 +28,9 @@ scripts=(
 ## format:
 ##   sites=('foo.com' 'bar.net' ...)
 ##   ssl_sites=('foo.com' 'bar.net' ...)
-sites=()
+sites=(
+    'andrewgioia.com'
+)
 sslSites=()
 
 ## list any php-fpm sites you want configured. this will write out a conf
