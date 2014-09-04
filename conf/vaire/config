@@ -1,0 +1,47 @@
+## configuration variables
+username=trunk
+nginxVersion=1.7.4
+mongodbVersion=
+opensslVersion=
+redisVersion=
+redisphpVersion=
+ipPublic=66.228.45.57
+ipPrivate=
+
+## scripts to run, arrange in order of execution (space separated).
+## these are the names of any script file in ./scripts (don't include
+## the .sh). add any of them to the scripts array.
+##
+## format:
+##   scripts=('script1' 'script2' ...)
+scripts=(
+    'user'
+    'nginx'
+    'php'
+    'profile'
+    'firewall'
+)
+
+## list any websites to have nginx auto-configured. DO NOT include the
+## www or http parts.
+##
+## format:
+##   sites=('foo.com' 'bar.net' ...)
+##   ssl_sites=('foo.com' 'bar.net' ...)
+sites=()
+sslSites=()
+
+## list any php-fpm sites you want configured. this will write out a conf
+## file to /etc/php5/fpm/pool.d specifying the socket path.
+##
+## format:
+##   fpm_sites=('foo.com' 'bar.net' ...)
+fpmSites=()
+
+## list any git or mercurial repos to be cloned
+##
+## format:
+##   git=('git_clone_url1' ...)
+##   hg=('hg_clone_url' ...)
+git=()
+hg=()
